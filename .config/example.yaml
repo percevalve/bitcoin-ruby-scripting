@@ -1,0 +1,12 @@
+:gaston:
+  clef_1:
+    private: ""
+    public: ""
+    address: ""
+    hash160: ""
+  clef_2:
+  	private: ""
+  	public: ""
+  	address: ""
+  faucet:
+  	address: "msj42CCGruhRsFrGATiUuh25dtxYtnpbTx"
