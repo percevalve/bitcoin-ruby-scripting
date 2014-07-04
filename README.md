@@ -17,3 +17,15 @@ You will need to wait for the transaction to get included in the blockchain to s
 
 #Sending it back to the faucet
 The script sendback_to_faucet_from_regular_script.rb, will send the money directly back to the faucet using a standard script.
+
+
+#Testing some custom scripts
+Just use partial_to_clef_2_rest_in_special.rb to create a script with 3 output :
+* index 0 : send money to clef_2
+* index 1 : script with OP_EQUAL
+* index 2 : script with OP_TRUE
+
+You can after that use the scripts get_OP_TRUE and OP_EQUAL to transfert back the "test" bitcoin to clef_1
+
+#Sending money between clef_1 and clef_2
+The script standard_from_clef_1_clef_2.rb is an example of standard script to send money between both account.
