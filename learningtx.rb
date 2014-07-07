@@ -23,11 +23,9 @@ def make_my_simple_transaction prev_hash, prev_tx_output_index, value, hash_in, 
   	sig = Bitcoin.sign_data(kk, tx.signature_hash_for_input(0, prev_tx)) 
   	hash_in[sig_position] = [[sig.bytesize+1].pack("C"), sig].join.unpack("H*")
     sig = Bitcoin.sign_data(kk, tx.signature_hash_for_input(0, prev_tx))
-    #tx.in[0].script_sig = Bitcoin::Script.to_signature_pubkey_script(sig, [kk.public_key_hex].pack("H*"))
-    tx.in[0].script_sig = [ hash_in.join ].pack("H*")
-  else
-    
+    #tx.in[0].script_sig = Bitcoin::Script.to_signature_pubkey_script(sig, [kk.public_key_hex].pack("H*"))  
   end
+  tx.in[0].script_sig = [ hash_in.join ].pack("H*")
   
   
   return tx
